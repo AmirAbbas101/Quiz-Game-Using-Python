@@ -1,5 +1,5 @@
 print("Welcome to the Computer Quiz.")
-
+score = 0
 playing = input("Do you want to play? (yes/no) ").strip().lower()
 
 if playing != 'yes':
@@ -17,5 +17,10 @@ for key, value in quiz.items():
     answer = input(f"{key} ").strip()
     if answer.lower() == value.lower():
         print("Correct!")
+        score += 1
     else:
         print("Incorrect!")
+
+print(f"Your Score: {score}/4.")
+print (f"Your Score agverage is : {(score / 4) * 100}%.")
+
